@@ -1,15 +1,45 @@
 <script>
-import HelloApp from './components/HelloApp.vue';
+import axios from 'axios';
+import HeaderApp from './components/HeaderApp.vue';
+import MainApp from './components/MainApp.vue';
+import FooterApp from './components/FooterApp.vue';
 export default {
-  name:'App',
+  name: 'App',
+  data() {
+    return {
+      apiBaseUrl: 'http://127.0.0.1:8000/api/',
+      apiUrl: {
+        portfs: 'portf'
+      },
+      portf: []
+    }
+  },
   components: {
-    HelloApp
+    HeaderApp,
+    MainApp,
+    FooterApp,
+  },
+  methods: {
+    getPortf() {
+      axios.get(this.apiBaseUrl + this.apiUrl.portfs).then((response) => {
+        this.portf = response.data.results
+      }
+      ).catch((error) => {
+        console.log(error);
+      })
+    }
+  },
+  created() {
+    this.getPortf();
   }
+
 }
 </script>
 
 <template>
-  <HelloApp />
+  <HeaderApp />
+  <MainApp :data="portf" />
+  <FooterApp />
 </template>
 
 
