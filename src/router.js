@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import PortfPage from './pages/PortfPage.vue';
 import AboutPage from './pages/AboutPage.vue';
-import HomePage from './pages/HomePage.vue'
+import HomePage from './pages/HomePage.vue';
+import DetailPage from './pages/DetailPage.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -22,7 +23,13 @@ const router = createRouter({
             path: '/about',
             name: 'about',
             component: AboutPage
+        },
+        {
+            path: '/detail/:slug',
+            name: 'detail',
+            component: DetailPage
         }
+
     ]
 });
 export { router };

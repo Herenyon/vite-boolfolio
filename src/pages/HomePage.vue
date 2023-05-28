@@ -38,7 +38,7 @@ export default {
             <h2>HomePage</h2>
 
             <h1>Main</h1>
-            <div class="col col-md-4" v-for="portfo in portf">
+            <div class="col col-md-4 d-flex" v-for="portfo in portf">
                 <CardPost :portfs="portfo" />
             </div>
         </div>

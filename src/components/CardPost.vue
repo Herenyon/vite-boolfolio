@@ -18,7 +18,9 @@ export default {
         <div class="card-body">
             <h5 class="card-title">{{ portfs.repo_title }}</h5>
             <p class="card-text">{{ portfs.description.substring(0, 100) }}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <router-link :to="{ name: 'detail', params: { slug: portfs.slug } }">
+                Details
+            </router-link>
         </div>
     </section>
 </template>
