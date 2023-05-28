@@ -1,7 +1,7 @@
 <script>
 import axios from 'axios';
 import HeaderApp from './components/HeaderApp.vue';
-import MainApp from './components/MainApp.vue';
+
 import FooterApp from './components/FooterApp.vue';
 export default {
   name: 'App',
@@ -16,7 +16,7 @@ export default {
   },
   components: {
     HeaderApp,
-    MainApp,
+
     FooterApp,
   },
   methods: {
@@ -38,7 +38,8 @@ export default {
 
 <template>
   <HeaderApp />
-  <MainApp :data="portf" />
+  <router-view></router-view>
+  <!-- <MainApp :data="portf" /> -->
   <FooterApp />
 </template>
 
