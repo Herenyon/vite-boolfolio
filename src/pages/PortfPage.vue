@@ -5,5 +5,7 @@ export default {
 
 </script>
 <template>
-    <h2>PortfPage</h2>
+    <div class="container">
+        <h2>PortfPage</h2>
+    </div>
 </template>

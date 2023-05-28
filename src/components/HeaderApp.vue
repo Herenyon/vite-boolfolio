@@ -10,6 +10,11 @@ export default {
         <nav>
             <ul class="list-unstyled m-0 p-0 gap-2 d-flex">
                 <li>
+                    <router-link :to="{ name: 'home' }" class="nav-link">
+                        Home
+                    </router-link>
+                </li>
+                <li>
                     <router-link :to="{ name: 'portf' }" class="nav-link">
                         Portf
                     </router-link>

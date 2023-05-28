@@ -6,5 +6,7 @@ export default {
 </script>
 
 <template>
-    <h2>AboutPage</h2>
+    <div class="container">
+        <h2>AboutPage</h2>
+    </div>
 </template>
