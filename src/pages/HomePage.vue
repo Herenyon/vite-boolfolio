@@ -20,6 +20,7 @@ export default {
         getPortf() {
             axios.get(this.apiBaseUrl + this.apiUrl.portfs).then((response) => {
                 this.portf = response.data.results;
+
             }).catch((error) => {
                 console.log(error);
             });

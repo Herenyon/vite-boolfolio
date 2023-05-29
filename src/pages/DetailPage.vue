@@ -15,7 +15,8 @@ export default {
         getPortfs() {
             axios.get(this.apiBaseUrl + this.apiUrl.portfs + "/" + this.$route.params.slug)
                 .then((response) => {
-                    this.port = response.data.results;
+                    this.port = response.data.result;
+
                 })
         }
 
