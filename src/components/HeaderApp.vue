@@ -1,6 +1,8 @@
 <script>
+import TypeList from './TypeList.vue';
 export default {
-    name: 'Header'
+    name: 'Header',
+    components: { TypeList }
 }
 </script>
 
@@ -23,6 +25,9 @@ export default {
                     <router-link :to="{ name: 'about' }" class="nav-link">
                         About
                     </router-link>
+                </li>
+                <li>
+                    <TypeList />
                 </li>
 
             </ul>
