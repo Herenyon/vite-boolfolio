@@ -11,6 +11,7 @@ export default {
     },
     methods: {
         getType() {
+
             axios.get(`${this.store.apiBaseUrl}/types/${this.$route.params.slug}`)
                 .then((response) => {
                     console.log(response)
@@ -27,6 +28,9 @@ export default {
 
 <template>
     <div class="container">
-        <h2>TypePage</h2>
+        <h2>TypePage: {{ this.type.name }}</h2>
+        <ul>
+            <li v-for="types in type.portfs">{{ types.repo_title }}</li>
+        </ul>
     </div>
 </template>
