@@ -21,6 +21,13 @@ export default {
     },
     created() {
         this.getType();
+
+        this.$watch(
+            () => this.$route.params,
+            (toParams, previousParams) => {
+                this.getType();
+            }
+        )
     }
 }
 
